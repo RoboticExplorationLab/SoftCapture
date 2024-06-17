@@ -5,7 +5,7 @@ using SoftCapture
 using MeshCat
 
 include("properties.jl")
-include("plotter.jl")
+
 
 ##################### Initial conditions #####################
 
@@ -89,12 +89,13 @@ open(vis)
 sleep(5.0)
 print("Visualizer opened")
 
-speed_up_sim_factor = 1.0 # change this parameters to accelerate the simulation
-visualize_trajectories!(vis, Xc, qc, Uc, Xt, dt_sim, speed_up_sim_factor)
+SPEED_UP_SIM_FACTOR = 1.0 # change this parameters to accelerate the simulation
+visualize_trajectories!(vis, Xc, qc, Uc, Xt, dt_sim, SPEED_UP_SIM_FACTOR)
 
 
 ##################### Plotting #####################
 
-plotter.plot_trajectory(Xc[:,1:3], dt_sim, "Position [m]")
-plotter.plot_trajectory(Xc[:,4:6], dt_sim, "Velocity [m/s]")
-plotter.plot_trajectory(Uc, dt_sim, "Thrust [N]")
+# include("plotter.jl")
+# plotter.plot_trajectory(Xc[:,1:3], dt_sim, "Position [m]")
+# plotter.plot_trajectory(Xc[:,4:6], dt_sim, "Velocity [m/s]")
+# plotter.plot_trajectory(Uc, dt_sim, "Thrust [N]")

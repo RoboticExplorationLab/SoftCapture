@@ -1,6 +1,6 @@
 # Soft Capture of Tumbling Space Objects 
 
-Code accompanying the paper ["A Convex Formulation of the Soft-Capture Problem"](https://arxiv.org/abs/2405.00867).
+Code accompanying the paper ["A Convex Formulation of the Soft-Capture Problem"](https://arxiv.org/abs/2405.00867). Run `examples/scp.jl` after installation.
 
 This repository contains:
 - An implementation of the convex trajectory optimization algorithm described in the paper.
